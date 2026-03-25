@@ -1,4 +1,4 @@
-# TD 01 - Audit express d’un site web
+# TD 01 - Audit express d’un site web (eco conception)
 
 Ce travail est à faire en groupe. Il comptera dans vos évaluations.
 Répartissez-vous intelligemment le travail et communiquez entre-vous.
@@ -11,9 +11,9 @@ Durée : 2H
 
 Vous avez 1h pour :
 * analyser le plus rapidement possible un site Web
-* lister les 5 points qui posent le plus problème selon vous
-* justifier en expliquant pourquoi ils posent problème
-* lister les pistes d'amélioration qui vous semblent les plus pertinentes
+* lister les 5 points qui posent le plus problème selon vous (eco conception)
+* justifier en expliquant pourquoi ils posent problème (eco conception)
+* lister les pistes d'amélioration qui vous semblent les plus pertinentes (eco conception)
 
 Puis, en 2ème heure du TD, chaque groupe présentera son audit au reste de la classe.
 En fin de séance, l'ensemble de la classe synthétisera les enseignements à tirer de cet atelier.
