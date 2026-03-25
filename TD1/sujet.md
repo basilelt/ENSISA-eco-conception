@@ -22,16 +22,11 @@ En fin de séance, l'ensemble de la classe synthétisera les enseignements à ti
 5 min
 Répartissez-vous en groupes de 5 à 7 personnes.
 Chaque groupe auditera un site différent.
+Nous sommes groupe 6
 
 | Groupe | Site | Description |
 |---|---|---|
-| Groupe 1 | https://www.ensisa.uha.fr | Le site institutionnel de votre école |
-| Groupe 2 | https://iroco.co | Le site d'un fournisseur d'email |
-| Groupe 3 | https://roseprimaire.com | Agence de communication et numérique responsables |
-| Groupe 4 | https://manuscry.com | Courriers marketing connectés à vos outils et stratégies digitales |
-| Groupe 5 | https://www.cop28.com | Site de la 28e Conférence des Parties sur les changements climatiques (COP28) qui s'est tenue à Dubaï en 2023 |
 | Groupe 6 | https://www.tiktok.com | TikTok est une application mobile de partage de courtes vidéos créatives (verticales et de quelques secondes à quelques minutes) et d'images, ainsi qu'un réseau social basé sur un algorithme de recommandation favorisant la viralité |
-| Groupe 7 | https://designersethiques.org/ | Designers Éthiques est une association qui explore les pratiques de conception numérique. |
 
 ## Analyzez le site
 
@@ -46,7 +41,7 @@ De cette analyse, pourrez dégager 5 points qui vous semblent les plus probléma
 Fiez vous à votre ressenti et à votre première impression... et à votre cours.
 
 ### Votre boîte à outils
-* Green Web Foundation - does your site runs on green energy ?
+* Green Web Foundation - does your site runs on green energy ? 
 * Google Lighthouse
 * EcoIndex.fr
 * GreenIT-Analysis
@@ -56,8 +51,6 @@ Fiez vous à votre ressenti et à votre première impression... et à votre cour
   * Opquast - règles d'éco-conception
   * RGESN
   * RWeb Greenit.fr
-* Les terminaux à disposition, plus ou moins anciens (voire antiques pour certains).
-* Métacartes numérique éthique
 
 ## Identifez et évaluez les impacts
 
