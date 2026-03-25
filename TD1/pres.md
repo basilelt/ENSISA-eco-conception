@@ -36,44 +36,56 @@ paginate: true
 
 Basile LE THIEC · Lilian NOACCO · Dorian POELLEN · Léon SCHER
 
-Groupe 6 — ENSISA, 25 mars 2026
+Groupe 6
 
 ---
 
 # Présentation du site analysé
 
-**TikTok** (`tiktok.com`) — réseau social de courtes vidéos verticales, piloté par un algorithme de recommandation.
+**TikTok** — réseau social de courtes vidéos verticales, piloté par un algorithme de recommandation.
 
 **Pages analysées :**
-- 🏠 **Page d'accueil** — `tiktok.com/` — feed principal avec vidéos en autoplay
-- 🔍 **Page Explore** — `tiktok.com/explore` — grille de découverte de contenus tendance
+- **Page d'accueil** — `https://www.tiktok.com` — feed principal avec vidéos en autoplay
+- **Page Explore** — `https://www.tiktok.com/explore` — grille de découverte de contenus tendance
+
+![jaaaj](https://hackmd.io/_uploads/H19Nx_Wsbx.png)
+
+---
 
 **Outils utilisés :**
 | Outil | Homepage | Explore |
 |---|---|---|
-| Google Lighthouse | Perf **61** · A11y 74 · BP 73 | Perf **36** · A11y **92** · BP 54 |
-| EcoIndex (calcul) | **9.6/100 → Grade G** | **24.9/100 → Grade F** |
-| Green Web Foundation | ❌ TikTok **n'utilise pas** d'énergie verte | — |
-| Référentiels | RGESN, Opquast | — |
+| Google Lighthouse | Perf **61** · A11y (Accessibilité) **74** · BP (Best Practices) **73** | Perf **36** · A11y **92** · BP **54** |
+| EcoIndex | **33/100 → Grade E** · 5,03 Mo · 228 requêtes · 509 DOM | **24.9/100 → Grade F** |
+| Green Web Foundation | TikTok **n'utilise pas** d'énergie verte (pas référencé sur le site)| — |
+| GreenIT | Score **D** sur une page de vidéo. Sur la page d'une vidéo, on a **41.60** comme "EcoIndex", **3.25cl** d'eau, et **2.17g** de GES (gCO2e) consommé.| Score **F** sur la page explore ; **13.28** comme score "EcoIndex", **4.10cl** d'eau, et **2.73g** de GES consommé.| 
+| Carbonalyzer | Test de 1 minute : **117MB** - **17g** de CO2 - 2 recharges de téléphone | Test de 1 minute : **163MB** - **20g** de CO2 - 2 recharges de téléphone |
+    
+![Screenshot 2026-03-25 at 15.22.39](https://hackmd.io/_uploads/SJ861OWjWe.png)
 
 ---
 
 # 5 points les plus problématiques
 
-1. **Poids de page et nombre de requêtes excessifs**
-   _Homepage : 10 Mo, 391 requêtes · Explore : 5 Mo, 185 requêtes_
+<div class="columns">
+<div>
 
-2. **JavaScript massif et non utilisé (obésiciel)**
-   _1,8 Mo de JS inutile (homepage) · TTI : 8,6 s (home), 21,6 s (explore)_
-
+1. **Poids de page et nombre de requêtes excessifs** — Homepage : >10 Mo, 391 requêtes — Explore : 5 Mo, 185 requêtes
+2. **JavaScript massif et non utilisé (obésiciel)** — 1,8 Mo de JS inutile (homepage) — TTI : 8,6 s (home), 21,6 s (explore)
 3. **Algorithme de recommandation & autoplay infini (dark pattern)**
-   _Design conçu pour maximiser le temps d'écran, pas l'utilité_
-
-4. **Hébergement non vert + empreinte carbone élevée**
-   _EcoIndex G (homepage) : 2,81 gCO2e, 4,21 cl d'eau par visite_
-
+   Design conçu pour maximiser le temps d'écran, pas l'utilité
+4. **Mauvaise sobriété environnementale confirmée par EcoIndex**
+   Homepage : score **33/100 (grade E)** · 5,03 Mo · 228 requêtes · 509 éléments DOM
 5. **Accessibilité et impacts sociaux insuffisants**
-   _A11y 74/100 sur la homepage ; cyberharcèlement, santé mentale, modération IA opaque_
+   A11y 74/100 ; cyberharcèlement, santé mentale, modération IA opaque
+
+</div>
+<div>
+
+![EcoIndex score](https://hackmd.io/_uploads/SJOy6PbiZe.png)
+
+</div>
+</div>
 
 ---
 
@@ -84,10 +96,8 @@ Groupe 6 — ENSISA, 25 mars 2026
 | 1 | 10 Mo / 391 requêtes | Consommation réseau élevée, incompatible avec terminaux anciens → **obsolescence forcée** |
 | 2 | 1,8 Mo JS inutilisé | **Obésiciel** : surcharge CPU 6,1 s, consomme batterie, force l'achat de matériel neuf |
 | 3 | Autoplay & scroll infini | **Effet rebond** : chaque optimisation UX augmente le temps passé → +data, +énergie |
-| 4 | Hébergement non vert | EcoIndex **G** = pire percentile ; ~2,81 gCO2e × milliards de visites/jour |
-| 5 | Accessibilité 74/100 | **Exclusion numérique** (ODD 10) ; cyberharcèlement = impact social négatif majeur |
-
-> L'éco-conception englobe les 3 piliers du développement durable : environnement, économie, **social**.
+| 4 | Mauvaise note EcoIndex | La homepage obtient **33/100 (grade E)** : le problème vient surtout du **poids de page** et du **nombre élevé de requêtes**, plus que de la complexité DOM |
+| 5 | Accessibilité 74/100 | **Exclusion numérique** ; cyberharcèlement = impact social négatif majeur |
 
 ---
 
@@ -95,11 +105,11 @@ Groupe 6 — ENSISA, 25 mars 2026
 
 | # | Action concrète | Acteur(s) |
 |---|---|---|
-| 1 | Lazy-loading des médias, compression Brotli, CDN intelligent, mise en cache agressive | Dev backend, DevOps |
-| 2 | Tree-shaking, code splitting, audits Lighthouse en CI/CD, réduire les dépendances | Dev frontend, Tech Lead |
-| 3 | Limiter l'autoplay par défaut, proposer un "mode sobre" avec pause auto, supprimer le scroll infini | Designer, Product Owner |
-| 4 | Migrer l'hébergement vers des fournisseurs certifiés énergie verte (label Green Web Foundation) | DevOps, Manager |
-| 5 | Audits RGAA/axe réguliers, alt-texts systématiques, renforcer la modération humaine, transparence algo | Dev, Designer, Trust & Safety |
+| 1 | **Lazy-loading** des médias, compression, CDN, cache | Dev backend, DevOps |
+| 2 | **Audits Lighthouse** en CI/CD, réduire les dépendances | Dev frontend, Tech Lead |
+| 3 | **Limiter l'autoplay** par défaut, **"mode sobre"** avec pause auto, **supprimer le scroll infini** | Designer, Product Owner |
+| 4 | **Réduire le poids initial de la page** et le nombre de requêtes, puis migrer vers un hébergement plus sobre/vert | DevOps, Dev frontend, Manager |
+| 5 | **Audits**, alt-texts systématiques, renforcer la modération humaine, transparence algo | Dev, Designer, Safety Team |
 
 ---
 
@@ -108,7 +118,7 @@ Groupe 6 — ENSISA, 25 mars 2026
 **Ce que nous avons appris :**
 
 - L'éco-conception dépasse la performance technique : elle couvre l'**accessibilité**, l'**éthique** et les **effets rebond**
-- TikTok illustre le paradoxe : service très fluide en apparence, mais **Grade G EcoIndex** (pire classe)
+- TikTok illustre le paradoxe : service fluide en apparence, mais **note E sur EcoIndex** sur la homepage, à cause d'une page lourde et très bavarde en requêtes réseau
 - Les **dark patterns** (autoplay, scroll infini) sont un problème d'éco-conception à part entière
 - Le fait que TikTok **n'utilise pas d'énergie verte** démultiplie son impact à l'échelle mondiale
 - Les outils (Lighthouse, EcoIndex) permettent de **quantifier** des problèmes qui semblent abstraits
