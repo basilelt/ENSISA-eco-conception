@@ -32,6 +32,9 @@ Nous sommes groupe 6
 
 **Objectif**
 Choisissez **2 pages représentatives** et analysez les avec les outils de votre choix parmi ceux mis à votre disposition.
+- https://www.tiktok.com
+- https://www.tiktok.com/explore
+
 
 Une **analyse superficielle** est suffisante.
 
